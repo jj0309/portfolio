@@ -1,0 +1,127 @@
+@font-face {
+  font-family: Lato;
+  src: url("./fonts/Lato-Regular.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Lato;
+}
+
+#siteContainerGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+}
+
+#siteContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 8;
+  grid-column: 2/10;
+}
+
+#PresentationCardContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("./images/blurryBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+.PresentationCard {
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 17em;
+  margin-bottom: 25em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2em;
+  width: 50%;
+  -webkit-box-shadow: 4px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.PresentationCard a {
+  text-decoration: none;
+  color: #14213d;
+}
+
+.PresentationCard h4 {
+  margin-bottom: 0.5em;
+}
+
+.PresentationCard hr {
+  background-color: #14213d;
+  height: 1px;
+  margin: 0 5em;
+  margin-top: 1em;
+}
+
+.PresentationCard .ContactContainer, .PresentationCard .SectionJumper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.PresentationCard .ClickableBox {
+  border: 1px solid #8d99ae;
+  border-radius: 2px;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+}
+
+#Projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#Projects .ProjectSectionItem {
+  margin: 0.5em;
+  border: 1px solid #8d99ae;
+  border-radius: 5px;
+  background-color: #14213d;
+  -webkit-box-shadow: 2px 3px rgba(0, 0, 0, 0.8);
+          box-shadow: 2px 3px rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+}
+
+#Projects .ProjectSectionItem p {
+  padding: 0em 1em;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,92 @@
+$primaryColor:white;
+$offColor:#14213d;
+$borderColor:#8d99ae;
+
+@font-face{
+    font-family: Lato;
+    src: url('./fonts/Lato-Regular.ttf');
+}
+html{
+    scroll-behavior: smooth;
+}
+body,html{
+    margin: 0;padding: 0;
+    font-family: Lato;
+}
+#siteContainerGrid{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+}
+#siteContainer{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/10;
+}
+#PresentationCardContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./images/blurryBG.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+.PresentationCard{
+    background-color: $primaryColor;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 17em;
+    margin-bottom: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2em;
+    width: 50%;
+    box-shadow:4px 6px rgba($color: #000000, $alpha: 0.3);
+    a{
+        text-decoration: none;
+        color: $offColor;
+    }
+    h4{
+        margin-bottom: 0.5em;
+    }
+    hr{
+        background-color: $offColor;
+        height: 1px;
+        margin: 0 5em;
+        margin-top: 1em;
+    }
+    .ContactContainer,.SectionJumper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .ClickableBox{
+        border: 1px solid $borderColor;
+        border-radius: 2px;
+        padding: 0.5em 1em;
+        margin:0 0.5em;
+    }
+}
+
+#Projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    .ProjectSectionItem{
+        margin: 0.5em;
+        border: 1px solid $borderColor;
+        border-radius: 5px;
+        background-color: $offColor;
+        box-shadow:2px 3px rgba($color: #000000, $alpha: 0.8);
+        color: $primaryColor;
+        text-align: center;
+        p{
+            padding: 0em 1em;
+        }
+    }
+}
+
+

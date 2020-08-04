@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/index/index.css">
+    <script src='./contentData/Projects.js'></script>
+    <script src='./public/Projects/ProjectSection.js'></script>
+    <script src='./public/index/js/index.js'></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <div id='siteContainerGrid'>
+        <div id='siteContainer'>
+            <div id='PresentationCardContainer'></div>
+            <Section class='PresentationCard'>
+                <img></img>
+                <h2>Ka-son Chau</h2>
+                <hr>
+                <div>
+                    <p>Bienvenue à mon portfolio</p>
+                </div>
+                <hr>
+                <h4>Contact informations</h4>
+                <div class="ContactContainer">
+                    <a href="https://www.linkedin.com/in/ka-son-chau-64104713b/" target="_blank"><div class='ClickableBox'>
+                        linkedin
+                    </div></a>
+                    <a href="https://github.com/jj0309" target="_blank"><div class='ClickableBox'>
+                        github
+                    </div></a>
+                    <a  href="mailto:ka.alex.chau@gmail.com"><div class='ClickableBox'>
+                        email
+                    </div></a>
+                </div>
+                <hr>
+                <h4>Projects & Resume</h4>
+                <div class="SectionJumper">
+                    <a href="#Projects"><div class='ClickableBox'>Projects</div></a>
+                    <a href="./public/Resume/Ka-sonChau.pdf" target='_blank'><div class='ClickableBox'>Resume</div></a>
+                </div>
+            </Section>
+            <Section id='Projects'>
+                <template id='ProjectTemplate'>
+                    <div class='Project'>
+                        <div class='ProjectName'>Project name</div>
+                        <div class='ProjectDescription'><p>Project description</p></div>
+                        <div class='ProjectTechs'>Project technologies</div>
+                    </div>
+                </template>
+            </Section>
+            <Section id='Resume'>
+
+            </Section>
+        </div>
+    </div>
+</body>
+</html>
