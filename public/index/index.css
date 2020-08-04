@@ -18,6 +18,8 @@ body, html {
   display: grid;
   -ms-grid-columns: (1fr)[10];
       grid-template-columns: repeat(10, 1fr);
+  background-color: #d2e1da;
+  z-index: -999;
 }
 
 #siteContainer {
@@ -42,7 +44,7 @@ body, html {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
 }
 
 .PresentationCard {
@@ -57,11 +59,12 @@ body, html {
   width: 50%;
   -webkit-box-shadow: 4px 6px rgba(0, 0, 0, 0.3);
           box-shadow: 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 999;
 }
 
 .PresentationCard a {
   text-decoration: none;
-  color: #14213d;
+  color: #62937C;
 }
 
 .PresentationCard h4 {
@@ -69,7 +72,7 @@ body, html {
 }
 
 .PresentationCard hr {
-  background-color: #14213d;
+  background-color: #62937C;
   height: 1px;
   margin: 0 5em;
   margin-top: 1em;
@@ -95,6 +98,11 @@ body, html {
   margin: 0 0.5em;
 }
 
+.PresentationCard .ClickableBox img {
+  width: 50px;
+  height: 50px;
+}
+
 #Projects {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,10 +122,10 @@ body, html {
   margin: 0.5em;
   border: 1px solid #8d99ae;
   border-radius: 5px;
-  background-color: #14213d;
+  background-color: white;
   -webkit-box-shadow: 2px 3px rgba(0, 0, 0, 0.8);
           box-shadow: 2px 3px rgba(0, 0, 0, 0.8);
-  color: white;
+  color: #62937C;
   text-align: center;
 }
 
