@@ -20,7 +20,7 @@ body, html {
   -ms-grid-columns: (1fr)[10];
       grid-template-columns: repeat(10, 1fr);
   z-index: -999;
-  background-color: #DAE7E1;
+  background-color: #f9afa2;
 }
 
 #MainContent {
@@ -40,7 +40,7 @@ body, html {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("./images/blurryBG.jpg");
+  background-image: url("./images/blurryBG2.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -48,12 +48,19 @@ body, html {
   z-index: 1;
 }
 
+#PresentationCardContainer #videoBg {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 #FadeOutEffectPresentationCardContainer {
   position: absolute;
   top: 95%;
   left: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(95%, #dae7e1));
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #dae7e1 95%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(95%, #f9afa2));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f9afa2 95%);
   height: 5vh;
   width: 100%;
   z-index: 2;
@@ -195,8 +202,8 @@ body, html {
 #FadeOutEffectProjectContainer {
   height: 5vh;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#dae7e1), color-stop(95%, #b6e0e2));
-  background-image: linear-gradient(to bottom, #dae7e1, #b6e0e2 95%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9afa2), color-stop(95%, #ffc3a1));
+  background-image: linear-gradient(to bottom, #f9afa2, #ffc3a1 95%);
   z-index: 2;
 }
 
@@ -208,7 +215,7 @@ body, html {
   -ms-grid-rows: (1fr)[10];
       grid-template-rows: repeat(10, 1fr);
   height: 25vh;
-  background-color: #B6E0E2;
+  background-color: #ffc3a1;
   z-index: 1;
 }
 
@@ -220,5 +227,25 @@ body, html {
 
 .About h3:first-of-type {
   text-align: center;
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  #videoBg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+  #videoBg {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #videoBg {
+    display: none;
+  }
 }
 /*# sourceMappingURL=index.css.map */

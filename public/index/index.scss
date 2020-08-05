@@ -1,7 +1,7 @@
 $primaryColor:white;
 $offColor:#545e56;
-$offColorContrast:#DAE7E1;
-$offColorContrastFooter:#B6E0E2;
+$offColorContrast:#f9afa2;
+$offColorContrastFooter:#ffc3a1;
 $borderColor:#8d99ae;
 
 @font-face{
@@ -31,12 +31,17 @@ body,html{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('./images/blurryBG.jpg');
+    background-image: url('./images/blurryBG2.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     z-index: 1;
+    #videoBg{
+        width: 100%;
+        height: 100vh;
+        object-fit: fill;
+    }
 }
 #FadeOutEffectPresentationCardContainer{
     position: absolute;
@@ -165,5 +170,22 @@ body,html{
     }
 }
 
+@media (min-aspect-ratio:16/9){
+    #videoBg{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9){
+    #videoBg{
+        width: auto;
+        height: 100%;
+    }
+}
+@media (max-width:768px){
+    #videoBg{
+        display: none;
+    }
+}
 
 
