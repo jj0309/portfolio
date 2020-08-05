@@ -76,6 +76,7 @@ body, html {
 
 .PresentationCard a {
   text-decoration: none;
+  color: #545e56;
 }
 
 .PresentationCard a:visited {
