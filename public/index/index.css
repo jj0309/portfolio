@@ -11,18 +11,19 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: Lato;
+  color: #545e56;
 }
 
-#siteContainerGrid {
+#MainContentContainer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[10];
       grid-template-columns: repeat(10, 1fr);
-  background-color: #d2e1da;
   z-index: -999;
+  background-color: #DAE7E1;
 }
 
-#siteContainer {
+#MainContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,6 +48,17 @@ body, html {
   z-index: 1;
 }
 
+#FadeOutEffectPresentationCardContainer {
+  position: absolute;
+  top: 95%;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(95%, #dae7e1));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #dae7e1 95%);
+  height: 5vh;
+  width: 100%;
+  z-index: 2;
+}
+
 .PresentationCard {
   background-color: white;
   border-radius: 5px;
@@ -64,7 +76,10 @@ body, html {
 
 .PresentationCard a {
   text-decoration: none;
-  color: #62937C;
+}
+
+.PresentationCard a:visited {
+  color: #545e56;
 }
 
 .PresentationCard h4 {
@@ -72,7 +87,7 @@ body, html {
 }
 
 .PresentationCard hr {
-  background-color: #62937C;
+  background-color: #545e56;
   height: 1px;
   margin: 0 5em;
   margin-top: 1em;
@@ -96,6 +111,12 @@ body, html {
   border-radius: 2px;
   padding: 0.5em 1em;
   margin: 0 0.5em;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+}
+
+.PresentationCard .ClickableBox:hover {
+  background-color: #a8dadc;
 }
 
 .PresentationCard .ClickableBox img {
@@ -107,29 +128,96 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
+#Projects h3:first-of-type {
+  text-align: center;
+}
+
 #Projects .ProjectSectionItem {
-  margin: 0.5em;
+  width: 50%;
+  margin: auto;
   border: 1px solid #8d99ae;
   border-radius: 5px;
   background-color: white;
   -webkit-box-shadow: 2px 3px rgba(0, 0, 0, 0.8);
           box-shadow: 2px 3px rgba(0, 0, 0, 0.8);
-  color: #62937C;
   text-align: center;
 }
 
 #Projects .ProjectSectionItem p {
   padding: 0em 1em;
+}
+
+#Projects .CollapseButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 4em;
+  width: 65%;
+  margin: auto;
+  padding-top: 1em;
+  font-size: 1em;
+  text-align: left;
+  border: 1px solid #8d99ae;
+  border-radius: 5px;
+}
+
+#Projects .CollapseButton:hover {
+  cursor: pointer;
+}
+
+#Projects .CollapseButton h4 {
+  width: 33%;
+}
+
+#Projects .CollapseButton span {
+  width: auto;
+  font-size: 2em;
+}
+
+#FadeOutEffectProjectContainer {
+  height: 5vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dae7e1), color-stop(95%, #b6e0e2));
+  background-image: linear-gradient(to bottom, #dae7e1, #b6e0e2 95%);
+  z-index: 2;
+}
+
+#AboutAndFooter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
+  height: 25vh;
+  background-color: #B6E0E2;
+  z-index: 1;
+}
+
+.About {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-column: 3/9;
+}
+
+.About h3:first-of-type {
+  text-align: center;
 }
 /*# sourceMappingURL=index.css.map */

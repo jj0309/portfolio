@@ -1,5 +1,7 @@
 $primaryColor:white;
-$offColor:#62937C;
+$offColor:#545e56;
+$offColorContrast:#DAE7E1;
+$offColorContrastFooter:#B6E0E2;
 $borderColor:#8d99ae;
 
 @font-face{
@@ -12,14 +14,15 @@ html{
 body,html{
     margin: 0;padding: 0;
     font-family: Lato;
+    color: $offColor;
 }
-#siteContainerGrid{
+#MainContentContainer{
     display: grid;
     grid-template-columns: repeat(10,1fr);
-    background-color: #d2e1da;
     z-index: -999;
+    background-color: $offColorContrast;
 }
-#siteContainer{
+#MainContent{
     display: flex;
     flex-direction: column;
     grid-column: 2/10;
@@ -35,6 +38,15 @@ body,html{
     width: 100%;
     z-index: 1;
 }
+#FadeOutEffectPresentationCardContainer{
+    position: absolute;
+    top:95%;
+    left: 0;
+    background-image : linear-gradient(to bottom, rgba(255,255,255, 0),rgba($offColorContrast, 1) 95%);
+    height:5vh;
+    width: 100%;
+    z-index: 2;
+}
 .PresentationCard{
     background-color: $primaryColor;
     border-radius: 5px;
@@ -49,7 +61,9 @@ body,html{
     z-index: 999;
     a{
         text-decoration: none;
-        color: $offColor;
+        &:visited{
+            color: $offColor;
+        }
     }
     h4{
         margin-bottom: 0.5em;
@@ -70,6 +84,10 @@ body,html{
         border-radius: 2px;
         padding: 0.5em 1em;
         margin:0 0.5em;
+        transition: ease-in 0.5s;
+        &:hover{
+            background-color: #a8dadc;
+        }
         img{
             width: 50px;
             height: 50px;
@@ -79,21 +97,72 @@ body,html{
 
 #Projects{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    h3{
+        &:first-of-type{
+            text-align: center;
+        }
+    }
     .ProjectSectionItem{
-        margin: 0.5em;
+        width: 50%;
+        margin: auto;
         border: 1px solid $borderColor;
         border-radius: 5px;
         background-color: white;
         box-shadow:2px 3px rgba($color: #000000, $alpha: 0.8);
-        color: $offColor;
         text-align: center;
         p{
             padding: 0em 1em;
         }
     }
+    .CollapseButton{
+        display: flex;
+        justify-content: space-between;
+        height: 4em;
+        width: 65%;
+        margin: auto;
+        padding-top: 1em;
+        font-size: 1em;
+        text-align: left;
+        border: 1px solid $borderColor;
+        border-radius: 5px;
+        &:hover{
+            cursor: pointer;
+        }
+        h4{
+            width: 33%;
+        }
+        span{
+            width: auto;
+            font-size: 2em;
+        }
+    }
 }
+#FadeOutEffectProjectContainer{
+    height:5vh;
+    width: 100%;
+    background-image : linear-gradient(to bottom, rgba($offColorContrast, 1),rgba($offColorContrastFooter, 1) 95%);
+    z-index: 2;
+}
+#AboutAndFooter{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    height: 25vh;
+    background-color: $offColorContrastFooter;
+    z-index: 1;
+}
+.About{
+    grid-column: 3/9;
+    h3{
+        &:first-of-type{
+            text-align: center;
+        }
+    }
+}
+
 
 

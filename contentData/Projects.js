@@ -1,6 +1,6 @@
 const ProjectsObj={
     0:{
-        name:'Jeu de carte de theme maplestory',
+        name:'Jeu de carte similaire à Heartstone',
         description:"Partie client d'un jeu de carte de style Heartstone fait dans le cadre du cours B63 Web en utilisant une api donnée par le prof.",
         techno:'PHP,Javascript,CSS,Ajax',
         img:{

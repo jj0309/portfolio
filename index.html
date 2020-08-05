@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/index/index.css">
+    <script src='./public/index/js/gsap-public/minified/gsap.min.js'></script>
     <script src='./contentData/Projects.js'></script>
     <script src='./public/Projects/ProjectSection.js'></script>
     <script src='./public/index/js/index.js'></script>
     <title>Portfolio</title>
 </head>
 <body>
-    <div id='siteContainerGrid'>
-        <div id='siteContainer'>
+    <div id='MainContentContainer'>
+        <div id='MainContent'>
             <div id='PresentationCardContainer'></div>
+            <div id='FadeOutEffectPresentationCardContainer'></div>
             <Section class='PresentationCard'>
                 <img></img>
                 <h2>Ka-son Chau</h2>
@@ -34,25 +36,36 @@
                     </div></a>
                 </div>
                 <hr>
-                <h4>Projects & Resume</h4>
+                <h4>Projets & Résumé</h4>
                 <div class="SectionJumper">
                     <a href="#Projects"><div class='ClickableBox'>Projects</div></a>
                     <a href="./public/Resume/Ka-sonChau.pdf" target='_blank'><div class='ClickableBox'>Resume</div></a>
                 </div>
             </Section>
             <Section id='Projects'>
+                <h3>Mes projets</h3>
                 <template id='ProjectTemplate'>
                     <div class='Project'>
                         <div class='ProjectName'>Project name</div>
                         <div class='ProjectDescription'><p>Project description</p></div>
-                        <div class='ProjectTechs'>Project technologies</div>
                     </div>
                 </template>
             </Section>
-            <Section id='Resume'>
-
-            </Section>
         </div>
+    </div>
+    <div id='FadeOutEffectProjectContainer'></div>
+    <div id='AboutAndFooter'>
+        <section class='About'>
+            <h3>Quoi de neuf?</h3>
+            <p>
+                La fin de session au collège a été très bizzare, on a juste rendu nos travaux et les examens fait en dehors des heures de cours.
+                Bien que c'était relaxe, je ne trouvais pas ca trop normale au niveau académique. En fait, rien n'est plus normale depuis le mois mars.
+                Je suis actuellement en train d'approfondir mes connaisances en ReactJS et mes connaisances en dévelopement web.
+                Le covid-19 rend la chose plus facile à cause du fait que je n'ai plus envie de sortir de chez moi.  :^ )
+                <br/><br/>
+                20 Mai 2020
+            </p>
+        </section>
     </div>
 </body>
 </html>
