@@ -197,10 +197,13 @@ body, html {
   text-align: left;
   border: 1px solid #8d99ae;
   border-radius: 5px;
+  -webkit-transition: ease-in 0.2s;
+  transition: ease-in 0.2s;
 }
 
 #Projects .CollapseButton:hover {
   cursor: pointer;
+  background-color: #fca311;
 }
 
 #Projects .CollapseButton p {

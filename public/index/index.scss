@@ -3,6 +3,7 @@ $offColor:#545e56;
 $offColorContrast:#1F2B47 ;
 $offColorContrastFooter:#253455;
 $borderColor:#8d99ae;
+$highlight:#fca311;
 $darkSeeTrough:rgba(35,35,35,0.7);
 
 @font-face{
@@ -144,8 +145,10 @@ body,html{
         text-align: left;
         border: 1px solid $borderColor;
         border-radius: 5px;
+        transition: ease-in 0.2s;
         &:hover{
             cursor: pointer;
+            background-color: $highlight;
         }
         p{
             width: 33%;
