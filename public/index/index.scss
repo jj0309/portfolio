@@ -52,12 +52,15 @@ body,html{
     width: 100%;
     z-index: 2;
 }
+#overVideo{
+    height: 100vh;
+    z-index: 2;
+}
 .PresentationCard{
     background-color: $primaryColor;
     border-radius: 5px;
     text-align: center;
-    margin-top: 17em;
-    margin-bottom: 25em;
+    margin-top: 14%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 2em;
@@ -113,7 +116,7 @@ body,html{
         }
     }
     .ProjectSectionItem{
-        width: 50%;
+        width: 65%;
         margin: auto;
         border: 1px solid $borderColor;
         border-radius: 5px;
@@ -138,7 +141,7 @@ body,html{
         &:hover{
             cursor: pointer;
         }
-        h4{
+        p{
             width: 33%;
         }
         span{
@@ -163,6 +166,7 @@ body,html{
 }
 .About{
     grid-column: 3/9;
+    grid-row: 1/11;
     h3{
         &:first-of-type{
             text-align: center;
@@ -183,8 +187,41 @@ body,html{
     }
 }
 @media (max-width:768px){
+    #MainContent{
+        grid-column: 1/11;
+    }
     #videoBg{
         display: none;
+    }
+    .PresentationCard{
+        width: 98%;
+    }
+    #Projects{
+        .CollapseButton{
+            width: 100%;
+            h4,p{
+                font-size: 0.5em;
+            }
+        }
+        .ProjectSectionItem{
+            width: 100%;
+            margin: 0;
+            p{
+                padding: 0em 1em;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .About{
+        grid-column: 1/11;
+        font-size: 0.5em;
+    }
+}
+@media (min-height:732px)and (max-height:850px){
+    .PresentationCard{
+        margin-top: 40%;
     }
 }
 

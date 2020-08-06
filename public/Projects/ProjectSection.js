@@ -10,15 +10,15 @@ const appendProjects=()=>{
         /* collapse button */
         let collapseButton = document.createElement('button');
         collapseButton.className = 'CollapseButton '+index;
-        collapseButton.innerHTML= '<h4>'+ProjectsObj[index].name+'</h4> <h4>'+ProjectsObj[index].techno+'</h4> <span>+</span>';
-
+        collapseButton.innerHTML= '<p>'+ProjectsObj[index].name+'</p> <p>'+ProjectsObj[index].techno+'</p> <span>+</span>';
+        if(index == 0)
+        collapseButton.innerHTML= '<p>'+ProjectsObj[index].name+'</p> <p>'+ProjectsObj[index].techno+'</p> <span>-</span>';
         /* project item */
         let div = document.createElement('div');
         let img = document.createElement('img');
         const presentationWidth = (window.outerWidth/2);
         div.className = 'ProjectSectionItem '+index;
         div.innerHTML = templateHtml;
-        div.style.width=presentationWidth+'px';
         div.querySelector('.ProjectName').innerHTML = ProjectsObj[index].name;
         div.querySelector('.ProjectDescription p').innerHTML = ProjectsObj[index].description;
         img.src=ProjectsObj[index].img[0];
@@ -32,7 +32,8 @@ const appendProjects=()=>{
 
         //hidden by default
         div.style.display='none';
-
+        if(index == 0)
+            div.style.display='block';
         /* add event listener to button */
         collapseButton.addEventListener('click',(event)=>{
             changePlusMinus(event);
@@ -65,7 +66,6 @@ const changePlusMinus=(e)=>{
 }
 
 const toggleDisplay=(div)=>{
-    console.log(div)
     if(div.style.display == 'none'){
         gsap.fromTo(div,{opacity:0},{opacity:1,duration:0.5});
         return div.style.display = 'block';
