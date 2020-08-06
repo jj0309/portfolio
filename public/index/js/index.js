@@ -23,13 +23,13 @@ const initImgStates=(nbOfProjects,imgStateObj)=>{
     param2:node in which we animate
  */
 const animationTyping=(Text,node)=>{
-    let typed = '';
+    let typed = '> ';
     let index = 0;
-    let timer = setInterval(() => {
+    let intervalTyping = setInterval(() => {
         typed+=Text[index];
-        node.innerHTML = typed;
+        node.innerHTML = typed+' _';
         index++;
         if(index>=Text.length)
-            clearInterval(timer);
+            clearInterval(intervalTyping);
     }, 300);
 }
