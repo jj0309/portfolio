@@ -11,7 +11,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: Lato;
-  color: #545e56;
+  color: white;
 }
 
 #MainContentContainer {
@@ -20,7 +20,7 @@ body, html {
   -ms-grid-columns: (1fr)[10];
       grid-template-columns: repeat(10, 1fr);
   z-index: -999;
-  background-color: #f9afa2;
+  background-color: #1F2B47;
 }
 
 #MainContent {
@@ -59,8 +59,8 @@ body, html {
   position: absolute;
   top: 95%;
   left: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(95%, #f9afa2));
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f9afa2 95%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(95%, #1f2b47));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1f2b47 95%);
   height: 5vh;
   width: 100%;
   z-index: 2;
@@ -72,7 +72,7 @@ body, html {
 }
 
 .PresentationCard {
-  background-color: white;
+  background-color: rgba(35, 35, 35, 0.7);
   border-radius: 5px;
   text-align: center;
   margin-top: 14%;
@@ -87,11 +87,15 @@ body, html {
 
 .PresentationCard a {
   text-decoration: none;
-  color: #545e56;
+  color: white;
 }
 
 .PresentationCard a:visited {
-  color: #545e56;
+  color: white;
+}
+
+.PresentationCard h2 {
+  padding-top: 1em;
 }
 
 .PresentationCard h4 {
@@ -99,7 +103,7 @@ body, html {
 }
 
 .PresentationCard hr {
-  background-color: #545e56;
+  background-color: white;
   height: 1px;
   margin: 0 5em;
   margin-top: 1em;
@@ -152,6 +156,11 @@ body, html {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  color: #545e56;
+}
+
+#Projects h3 {
+  color: white;
 }
 
 #Projects h3:first-of-type {
@@ -206,8 +215,8 @@ body, html {
 #FadeOutEffectProjectContainer {
   height: 5vh;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9afa2), color-stop(95%, #ffc3a1));
-  background-image: linear-gradient(to bottom, #f9afa2, #ffc3a1 95%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1f2b47), color-stop(95%, #253455));
+  background-image: linear-gradient(to bottom, #1f2b47, #253455 95%);
   z-index: 2;
 }
 
@@ -219,7 +228,8 @@ body, html {
   -ms-grid-rows: (1fr)[10];
       grid-template-rows: repeat(10, 1fr);
   height: 25vh;
-  background-color: #ffc3a1;
+  background-color: #253455;
+  color: white;
   z-index: 1;
 }
 

@@ -1,8 +1,9 @@
 $primaryColor:white;
 $offColor:#545e56;
-$offColorContrast:#f9afa2;
-$offColorContrastFooter:#ffc3a1;
+$offColorContrast:#1F2B47 ;
+$offColorContrastFooter:#253455;
 $borderColor:#8d99ae;
+$darkSeeTrough:rgba(35,35,35,0.7);
 
 @font-face{
     font-family: Lato;
@@ -14,7 +15,7 @@ html{
 body,html{
     margin: 0;padding: 0;
     font-family: Lato;
-    color: $offColor;
+    color: $primaryColor;
 }
 #MainContentContainer{
     display: grid;
@@ -57,7 +58,7 @@ body,html{
     z-index: 2;
 }
 .PresentationCard{
-    background-color: $primaryColor;
+    background-color: $darkSeeTrough;
     border-radius: 5px;
     text-align: center;
     margin-top: 14%;
@@ -69,16 +70,19 @@ body,html{
     z-index: 999;
     a{
         text-decoration: none;
-        color: $offColor;
+        color: $primaryColor;
         &:visited{
-            color: $offColor;
+            color: $primaryColor;
         }
+    }
+    h2{
+        padding-top: 1em;
     }
     h4{
         margin-bottom: 0.5em;
     }
     hr{
-        background-color: $offColor;
+        background-color: $primaryColor;
         height: 1px;
         margin: 0 5em;
         margin-top: 1em;
@@ -110,7 +114,9 @@ body,html{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    color: $offColor;
     h3{
+        color: $primaryColor;
         &:first-of-type{
             text-align: center;
         }
@@ -162,6 +168,7 @@ body,html{
     grid-template-rows: repeat(10,1fr);
     height: 25vh;
     background-color: $offColorContrastFooter;
+    color: $primaryColor;
     z-index: 1;
 }
 .About{
