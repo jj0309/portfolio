@@ -182,6 +182,11 @@ body, html {
   padding: 0em 1em;
 }
 
+#Projects .ProjectSectionItem img {
+  width: 90%;
+  margin: auto;
+}
+
 #Projects .CollapseButton {
   display: -webkit-box;
   display: -ms-flexbox;

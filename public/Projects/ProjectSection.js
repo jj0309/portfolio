@@ -16,14 +16,12 @@ const appendProjects=()=>{
         /* project item */
         let div = document.createElement('div');
         let img = document.createElement('img');
-        const presentationWidth = (window.outerWidth/2);
         div.className = 'ProjectSectionItem '+index;
         div.innerHTML = templateHtml;
         div.querySelector('.ProjectName').innerHTML = ProjectsObj[index].name;
         div.querySelector('.ProjectDescription p').innerHTML = ProjectsObj[index].description;
         img.src=ProjectsObj[index].img[0];
         img.alt='ProjectPreviewSS';
-        img.width=presentationWidth;
         div.appendChild(img);
 
         /* append both button and project */
@@ -35,8 +33,8 @@ const appendProjects=()=>{
         if(index == 0)
             div.style.display='block';
         /* add event listener to button */
-        collapseButton.addEventListener('click',(event)=>{
-            changePlusMinus(event);
+        collapseButton.addEventListener('click',()=>{
+            changePlusMinus(collapseButton);
             toggleDisplay(div);
         });
     };
@@ -58,11 +56,12 @@ const rollImgSlides=()=>{
     })
 }
 
-const changePlusMinus=(e)=>{
-    const current = e.target.querySelector('span').innerHTML;
+const changePlusMinus=(node)=>{
+    console.log(node);
+    const current = node.querySelector('span').innerHTML;
     if(current === '+')
-        return e.target.querySelector('span').innerHTML = '-';
-    return e.target.querySelector('span').innerHTML = '+';
+        return node.querySelector('span').innerHTML = '-';
+    return node.querySelector('span').innerHTML = '+';
 }
 
 const toggleDisplay=(div)=>{
