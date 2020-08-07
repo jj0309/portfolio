@@ -288,7 +288,7 @@ body, html {
     font-size: 0.5em;
   }
   #Projects .ProjectSectionItem {
-    width: 100%;
+    width: 99%;
     margin: 0;
   }
   #Projects .ProjectSectionItem p {
