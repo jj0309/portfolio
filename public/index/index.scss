@@ -4,7 +4,7 @@ $offColorContrast:#1F2B47 ;
 $offColorContrastFooter:#253455;
 $borderColor:#8d99ae;
 $highlight:#fca311;
-$darkSeeTrough:rgba(35,35,35,0.7);
+$darkSeeTrough:rgba(35,35,35,0.9);
 
 @font-face{
     font-family: Lato;
@@ -101,6 +101,7 @@ body,html{
         transition: ease-in 0.5s;
         &:hover{
             background-color: #a8dadc;
+            color: black;
         }
         img{
             width: 50px;

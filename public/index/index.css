@@ -72,7 +72,7 @@ body, html {
 }
 
 .PresentationCard {
-  background-color: rgba(35, 35, 35, 0.7);
+  background-color: rgba(35, 35, 35, 0.9);
   border-radius: 5px;
   text-align: center;
   margin-top: 14%;
@@ -133,6 +133,7 @@ body, html {
 
 .PresentationCard .ClickableBox:hover {
   background-color: #a8dadc;
+  color: black;
 }
 
 .PresentationCard .ClickableBox img {
