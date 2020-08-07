@@ -40,6 +40,9 @@ const appendProjects=()=>{
     };
 }
 
+/*
+    method for image slider in projects
+ */
 const rollImgSlides=()=>{
     let ProjectSectionItemArr = document.querySelectorAll('.ProjectSectionItem');
     let index = 0;
@@ -56,14 +59,19 @@ const rollImgSlides=()=>{
     })
 }
 
+/*
+    method to change the plus minus text in the project collapsable button
+ */
 const changePlusMinus=(node)=>{
-    console.log(node);
     const current = node.querySelector('span').innerHTML;
     if(current === '+')
         return node.querySelector('span').innerHTML = '-';
     return node.querySelector('span').innerHTML = '+';
 }
 
+/* 
+    method to toggle either show or not show the project onclick
+ */
 const toggleDisplay=(div)=>{
     if(div.style.display == 'none'){
         gsap.fromTo(div,{opacity:0},{opacity:1,duration:0.5});

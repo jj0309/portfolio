@@ -25,6 +25,7 @@ const initImgStates=(nbOfProjects,imgStateObj)=>{
 const animationTyping=(Text,node)=>{
     let typed = '> ';
     let index = 0;
+    node.innerHTML = typed;
     let intervalTyping = setInterval(() => {
         typed+=Text[index];
         node.innerHTML = typed+' _';
