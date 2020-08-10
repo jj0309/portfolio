@@ -20,6 +20,7 @@ const appendProjects=()=>{
         div.innerHTML = templateHtml;
         div.querySelector('.ProjectName').innerHTML = ProjectsObj[index].name;
         div.querySelector('.ProjectDescription p').innerHTML = ProjectsObj[index].description;
+        div.querySelector('.githubRepo').setAttribute("href",ProjectsObj[index].repo)
         img.src=ProjectsObj[index].img[0];
         img.alt='ProjectPreviewSS';
         div.appendChild(img);
