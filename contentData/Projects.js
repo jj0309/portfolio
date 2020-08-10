@@ -15,7 +15,7 @@ const ProjectsObj={
     },
     1:{
         name:'Tower Defense',
-        description:"Jeu de tower defence fait en équipe dans le cadre du cours B41 (gestion de projet)",
+        description:"Jeu de tower defense fait en équipe dans le cadre du cours B41 (gestion de projet)",
         techno:'Python',
         img:{
             0:'./contentData/ProjectImg/towerDefence/tower1.png',
