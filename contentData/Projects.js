@@ -1,5 +1,16 @@
 const ProjectsObj={
     0:{
+        name:'MSGBox',
+        description:"Une application web un peu comme discord qui permet d'avoir des conversations privées. Lien de la version live dans le repository github.",
+        techno:'Javascript,NodeJS,Express,Socket.io,Bootstrap,CSS,ejs,MongoDB',
+        img:{
+            0:'https://scontent-yyz1-1.xx.fbcdn.net/v/t1.15752-9/118041241_1630498620453393_3928945043650688545_n.png?_nc_cat=105&_nc_sid=b96e70&_nc_ohc=filIPgwBNOwAX-Dklxm&_nc_ht=scontent-yyz1-1.xx&oh=408fc9c64618d7e6e08ec0baa200cd49&oe=5F696115',
+            1:'https://scontent-yyz1-1.xx.fbcdn.net/v/t1.15752-9/118136325_342639296907698_2990882932071934658_n.png?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=MBSL-fj7p44AX8yUJxE&_nc_ht=scontent-yyz1-1.xx&oh=e317c693f4db827c522870a90ccad44f&oe=5F6204F9',
+            2:'https://scontent-yyz1-1.xx.fbcdn.net/v/t1.15752-9/118244281_725466558234521_2869796037218235120_n.png?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=2guBdCj9VRgAX80TDKc&_nc_ht=scontent-yyz1-1.xx&oh=8d19023f7950abdf91b48d79c831ff74&oe=5F669C82',
+        },
+        repo:'https://github.com/jj0309/MSGBox'
+    },
+    1:{
         name:'Jeu de carte similaire à Heartstone',
         description:"Partie client d'un jeu de carte de style Heartstone fait dans le cadre du cours B63 Web en utilisant une api donnée par le prof.",
         techno:'PHP,Javascript,CSS,Ajax',
@@ -13,7 +24,7 @@ const ProjectsObj={
         },
         repo:'https://github.com/jj0309/maplestoryRepo'
     },
-    1:{
+    2:{
         name:'Tower Defense',
         description:"Jeu de tower defense fait en équipe dans le cadre du cours B41 (gestion de projet)",
         techno:'Python',
@@ -23,7 +34,7 @@ const ProjectsObj={
         },
         repo:'https://github.com/jj0309/towerDefence'
     },
-    2:{
+    3:{
         name:'AMDB',
         description:"Site web de type IMDB en utilisant l'api themoviedb",
         techno:'ReactJs,CSS,Node,express',
@@ -35,7 +46,7 @@ const ProjectsObj={
         },
         repo:'https://github.com/jj0309/AMDB'
     },
-    3:{
+    4:{
         name:'Simulation',
         description:"Une simulation d'un écosystème réaliste fait en équipe dans le cadre du cours B51 (Développement de systèmes)",
         techno:'Python',
@@ -45,7 +56,7 @@ const ProjectsObj={
         },
         repo:'https://github.com/Dralic/B51-Evolution'
     },
-    4:{
+    5:{
         name:'Application web de Météo',
         description:"Une application web de Météo en utilisant l'api weatherapi",
         techno:'ReactJs,Sass,Node,express',
@@ -55,7 +66,7 @@ const ProjectsObj={
         },
         repo:'https://github.com/jj0309/weatherApplication'
     },
-    5:{
+    6:{
         name:'MySportsBet',
         description:"Une application web permettant de faire des paris sportifs, l'application utilise l'api mysportsfeeds pour avoir les horraires et les résultats de parties. L'application ne fut pas terminé (manque la partie de distributation des gains) du au fait que le monde des sports a vu un arrêt à cause du Covid-19",
         techno: 'Html,CSS,Javascript,Node,Express,MongoDB',
@@ -66,7 +77,7 @@ const ProjectsObj={
         },
         repo:'https://bitbucket.org/jj0309/projet_chauka-son/src/production/productionSynthese/'
     },
-    6:{
+    7:{
         name:'Game of Life',
         description:"Jeu d'automate cellulaire de John Conway",
         techno:'C++',

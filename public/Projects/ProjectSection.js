@@ -12,7 +12,7 @@ const appendProjects=()=>{
         collapseButton.className = 'CollapseButton '+index;
         collapseButton.innerHTML= '<p>'+ProjectsObj[index].name+'</p> <p>'+ProjectsObj[index].techno+'</p> <span>+</span>';
         if(index == 0)
-        collapseButton.innerHTML= '<p>'+ProjectsObj[index].name+'</p> <p>'+ProjectsObj[index].techno+'</p> <span>-</span>';
+            collapseButton.innerHTML= '<p>'+ProjectsObj[index].name+'</p> <p>'+ProjectsObj[index].techno+'</p> <span>-</span>';
         /* project item */
         let div = document.createElement('div');
         let img = document.createElement('img');

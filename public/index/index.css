@@ -380,4 +380,11 @@ body, html {
     grid-row: 1/18;
   }
 }
+
+@media (max-width: 1800px) {
+  .CollapseButton p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 /*# sourceMappingURL=index.css.map */
